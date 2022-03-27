@@ -4,6 +4,7 @@
     padding: 0;
     background-color: black;
     color: white;
+    line-height: 1.2;
 }
 
 body {
@@ -37,6 +38,11 @@ body {
     width: 50%;
 }
 
-.nav-row a {
-    text-decoration: none;
+button {
+    border: none;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
 }

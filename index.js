@@ -1,8 +1,8 @@
 document.getElementById("header-date").innerHTML = Date();
 
-let about_me = document.createElement('p');
-about_me.id = 'about-me';
-about_me.innerHTML = `
+let aboutMePage = document.createElement('p');
+aboutMePage.id = 'aboutMePage';
+aboutMePage.innerHTML = `
 ZGFuZHk100@portfoliowebsite ~ % cd about me
 <br>ZGFuZHk100@portfoliowebsite ~ % ls
 <br>about-me.txt
@@ -10,9 +10,9 @@ ZGFuZHk100@portfoliowebsite ~ % cd about me
 <br>I'm a business man by day and I'm a nerd by night
 `;
 
-let change_log = document.createElement('p');
-change_log.id = 'change-log';
-change_log.innerHTML =`
+let changeLogPage = document.createElement('p');
+changeLogPage.id = 'changeLogPage';
+changeLogPage.innerHTML =`
 ZGFuZHk100@portfoliowebsite ~ % cd change log
 <br>ZGFuZHk100@portfoliowebsite ~ % ls
 <br>change-log.txt
@@ -20,9 +20,9 @@ ZGFuZHk100@portfoliowebsite ~ % cd change log
 <br> No change yet
 `;
 
-let git_hub = document.createElement('p');
-git_hub.id = 'git-hub';
-git_hub.innerHTML =`
+let gitHubPage = document.createElement('p');
+gitHubPage.id = 'gitHubPage';
+gitHubPage.innerHTML =`
 ZGFuZHk100@portfoliowebsite ~ % cd git hub
 <br>ZGFuZHk100@portfoliowebsite ~ % ls
 <br>git-hub.txt
@@ -30,9 +30,9 @@ ZGFuZHk100@portfoliowebsite ~ % cd git hub
 <br> <a href="https://github.com/ZGFuZHk100" target="_blank">https://github.com/ZGFuZHk100</a>
 `;
 
-let projects = document.createElement('p');
-projects.id = 'projects';
-projects.innerHTML = `
+let projectsPage = document.createElement('p');
+projectsPage.id = 'projectsPage';
+projectsPage.innerHTML = `
 ZGFuZHk100@portfoliowebsite ~ % cd projects
 <br>ZGFuZHk100@portfoliowebsite ~ % ls
 <br>projects.txt
@@ -40,9 +40,9 @@ ZGFuZHk100@portfoliowebsite ~ % cd projects
 <br>No project yet
 `;
 
-let skills = document.createElement('p');
-skills.id = 'skills';
-skills.innerHTML = `
+let skillsPage = document.createElement('p');
+skillsPage.id = 'skillsPage';
+skillsPage.innerHTML = `
 ZGFuZHk100@portfoliowebsite ~ % cd skills
 <br>ZGFuZHk100@portfoliowebsite ~ % ls
 <br>skills.txt
@@ -57,32 +57,75 @@ ZGFuZHk100@portfoliowebsite ~ % cd /
 `;
 
 let directoryPositionCheck = 0;
-let bt_about_me_clicked = false;
-let bt_change_log_clicked = false;
+let btAboutMeClicked = false;
+let btChangeLogClicked = false;
+let btGitHubClicked = false;
+let btProjectsClicked = false;
+let btSkillsClicked = false;
 
 
-let bt_about_me = document.getElementById('bt-about-me');
-bt_about_me.onclick = function() {
-    if(directoryPositionCheck === 0 && bt_about_me_clicked === false) {
-        document.body.appendChild(about_me);
+
+let btAboutMe = document.getElementById('btAboutMe');
+btAboutMe.onclick = function() {
+    if(directoryPositionCheck === 0 && btAboutMeClicked === false) {
+        document.body.appendChild(aboutMePage);
         directoryPositionCheck ++;
-        bt_about_me_clicked = true;
-    } else if(bt_about_me_clicked === false) {
+        btAboutMeClicked = true;
+    } else if(btAboutMeClicked === false) {
         document.body.appendChild(upOneDirectoryLevel);
-        document.body.appendChild(about_me);
-        bt_about_me_clicked = true;
+        document.body.appendChild(aboutMePage);
+        btAboutMeClicked = true;
     }
 }
 
-let bt_change_log = document.getElementById('bt-change-log');
-bt_change_log.onclick = function() {
-    if(directoryPositionCheck === 0 && bt_change_log_clicked === false) {
-        document.body.appendChild(change_log);
+let btChangeLog = document.getElementById('btChangeLog');
+btChangeLog.onclick = function() {
+    if(directoryPositionCheck === 0 && btChangeLogClicked === false) {
+        document.body.appendChild(changeLogPage);
         directoryPositionCheck ++;
-        bt_change_log_clicked = true;
-    } else if(bt_change_log_clicked === false) {
+        btChangeLogClicked = true;
+    } else if(btChangeLogClicked === false) {
         document.body.appendChild(upOneDirectoryLevel);
-        document.body.appendChild(change_log);
-        bt_change_log_clicked = true;
+        document.body.appendChild(changeLogPage);
+        btChangeLogClicked = true;
+    }
+}
+
+let btGitHub = document.getElementById('btGitHub');
+btGitHub.onclick = function() {
+    if(directoryPositionCheck === 0 && btChangeLogClicked === false) {
+        document.body.appendChild(gitHubPage);
+        directoryPositionCheck ++;
+        btGitHubClicked = true;
+    } else if(btChangeLogClicked === false) {
+        document.body.appendChild(upOneDirectoryLevel);
+        document.body.appendChild(gitHubPage);
+        btGitHubClicked = true;
+    }
+}
+
+let btProjects = document.getElementById('btProjects');
+btProjects.onclick = function() {
+    if(directoryPositionCheck === 0 && btProjectsClicked === false) {
+        document.body.appendChild(projectsPage);
+        directoryPositionCheck ++;
+        btProjectsClicked = true;
+    } else if(btProjectsClicked === false) {
+        document.body.appendChild(upOneDirectoryLevel);
+        document.body.appendChild(projectsPage);
+        btProjectsClicked = true;
+    }
+}
+
+let btSkills = document.getElementById('btSkills');
+btSkills.onclick = function() {
+    if(directoryPositionCheck === 0 && btSkillsClicked === false) {
+        document.body.appendChild(skillsPage);
+        directoryPositionCheck ++;
+        btSkillsClicked = true;
+    } else if(btSkillsClicked === false) {
+        document.body.appendChild(upOneDirectoryLevel);
+        document.body.appendChild(skillsPage);
+        btSkillsClicked = true;
     }
 }

@@ -1,5 +1,42 @@
 * {
     font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
     background-color: black;
     color: white;
+}
+
+body {
+    display: block;
+    padding: 5px;
+}
+
+#command-line {
+    display: flex;
+    height: 1.5rem;
+    align-items: center;
+}
+
+#command-line p {
+    margin: 0 10px 0 0;
+}
+
+#command-input {
+    border-color: black;
+    width: 85%;
+}
+
+.nav-row {
+    display: flex;
+}
+
+.nav-row ul {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 50%;
+}
+
+.nav-row a {
+    text-decoration: none;
 }

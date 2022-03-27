@@ -1,0 +1,1 @@
+document.getElementById("header-date").innerHTML = Date();
